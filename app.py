@@ -66,4 +66,8 @@ def delete_product():
 
 if __name__ == '__main__':
 
-    delete_product()
+    #create_product()
+    #get_all_products()
+    #get_specific_product()
+    #update_product()
+    #delete_product()
