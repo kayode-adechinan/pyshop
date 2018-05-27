@@ -17,7 +17,7 @@ def create_product():
 
     headers = {"Accept": "application/json", "Content-Type": "application/json"}
 
-    r = requests.post("https://92c349fa7dbfa28f994d36e7157ce62f:8892ba49451216e7d4448692e7b66b66@kayodeadechinan.myshopify.com/admin/products.json", json=payload,  headers=headers)
+    r = requests.post("https://apikey:password@storeaddress.myshopify.com/admin/products.json", json=payload,  headers=headers)
 
     print(r.json())
 
@@ -25,8 +25,7 @@ def create_product():
 # get request: retrieve all products
 def get_all_products():
 
-    r = requests.get(
-    "https://92c349fa7dbfa28f994d36e7157ce62f:8892ba49451216e7d4448692e7b66b66@kayodeadechinan.myshopify.com/admin/products.json")
+    r = requests.get("https://apikey:password@storeaddress.myshopify.com/admin/products.json")
 
     print(r.json()['products'][0]['vendor'])
 
@@ -34,8 +33,7 @@ def get_all_products():
 # get request: retrieve product by id
 def get_specific_product():
 
-    r = requests.get(
-    "https://92c349fa7dbfa28f994d36e7157ce62f:8892ba49451216e7d4448692e7b66b66@kayodeadechinan.myshopify.com/admin/products/934425690169.json")
+    r = requests.get("https://apikey:password@storeaddress.myshopify.com/admin/products/934425690169.json")
 
     print(r.json())
 
@@ -52,7 +50,7 @@ def update_product():
 
     headers = {"Accept": "application/json", "Content-Type": "application/json"}
 
-    r = requests.put("https://92c349fa7dbfa28f994d36e7157ce62f:8892ba49451216e7d4448692e7b66b66@kayodeadechinan.myshopify.com/admin/products/934425690169.json", json=payload,  headers=headers)
+    r = requests.put("https://apikey:password@storeaddress.myshopify.com/admin/products/934425690169.json", json=payload,  headers=headers)
 
     print(r.json())
 
@@ -60,8 +58,7 @@ def update_product():
 # delete request: delete product
 def delete_product():
 
-    r = requests.delete(
-    "https://92c349fa7dbfa28f994d36e7157ce62f:8892ba49451216e7d4448692e7b66b66@kayodeadechinan.myshopify.com/admin/products/934425690169.json")
+    r = requests.delete("https://apikey:password@storeaddress.myshopify.com/admin/products/934425690169.json")
 
     print(r.status_code)
 
